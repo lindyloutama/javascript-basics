@@ -1,37 +1,37 @@
 const getNthElement = (index, array) => {
-  return index.forEach(array);
+  return array(index[0]);
 };
 
 const arrayToCSVString = (array) => {
-  // your code here
+  return array.join((","));
 };
 
 const csvStringToArray = (string) => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  return array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = (numbers) => {
-  // your code here
+  return numbers.map(String);
 };
 
 const uppercaseWordsInArray = (strings) => {
-  // your code here
+  return
 };
 
 const reverseWordsInArray = (strings) => {
-  // your code here
+  return strings.map();
 };
 
 const onlyEven = (numbers) => {
