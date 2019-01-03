@@ -47,15 +47,26 @@ const isSquare = (a) => {
 };
 
 const startsWith = (char, string) => {
-  return string.startsWith('');
+  if (string.startsWith(char)) {return true
+  } else {return false}
 };
 
 const containsVowels = (string) => {
-  return 'aeiou'.indexOf( chr[0].toLowerCase() ) !== -1;
+  const vowelList = 'AEIOUaeiou';
+  let vCount = 0;
+
+  for (let x = 0; x < string.length; x++)
+{
+  if (vowelList.indexOf(string[x]) !== -1)
+  {
+    vCount ++
+  }
+}
+return vCount > 0;
 };
 
 const isLowerCase = (string) => {
-  // your code here
+  return string === string.toLowerCase()
 };
 
 module.exports = {

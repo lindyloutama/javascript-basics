@@ -1,5 +1,5 @@
 const getNthElement = (index, array) => {
-  return array(index[0]);
+  return index > array.length - 1 ? array[index % array.length] : array[index];
 };
 
 const arrayToCSVString = (array) => {
@@ -11,7 +11,7 @@ const csvStringToArray = (string) => {
 };
 
 const addToArray = (element, array) => {
-  return array.push(element);
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
@@ -27,35 +27,45 @@ const numbersToStrings = (numbers) => {
 };
 
 const uppercaseWordsInArray = (strings) => {
-  return
+  return strings.map(string => string.toUpperCase());
 };
 
 const reverseWordsInArray = (strings) => {
-  return strings.map();
+  function revStr(str) {
+    return str.split('').reverse().join('');return arr.reverse(strings);
+  }
+  return strings.map(revStr);
 };
 
 const onlyEven = (numbers) => {
-  // your code here
+  return numbers.filter(number => number % 2 === 0 )
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter(arrFil => arrFil !== array[index]);
 };
 
 const elementsStartingWithAVowel = (strings) => {
-  // your code here
+  return strings.filter(arrFil => arrFil.charAt(0) === 'a' ||
+    arrFil.charAt(0) === 'e' || arrFil.charAt(0) === 'i' || 
+    arrFil.charAt(0) === 'o' || arrFil.charAt(0) === 'u' || 
+    arrFil.charAt(0) === 'A' || arrFil.charAt(0) === 'E' || 
+    arrFil.charAt(0) === 'I' || arrFil.charAt(0) === 'O' ||
+    arrFil.charAt(0) === 'U')
 };
 
 const removeSpaces = (string) => {
-  // your code here
+  return string.replace(/\s/g,'');
 };
 
 const sumNumbers = (numbers) => {
-  // your code here
+  return numbers.reduce(function(total,curVal) {
+  return  total + curVal;
+ })
 };
 
 const sortByLastLetter = (strings) => {
-  // your code here
+  return strings.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 };
 
 module.exports = {

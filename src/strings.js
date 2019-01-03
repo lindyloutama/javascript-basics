@@ -19,7 +19,7 @@ const firstCharacter = (string) => {
 };
 
 const firstCharacters = (string, n) => {
-  return string.substr(-20, 4);
+  return string.substr(0, n);
 };
 
 module.exports = {
